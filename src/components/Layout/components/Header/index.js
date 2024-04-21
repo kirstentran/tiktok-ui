@@ -11,6 +11,7 @@ import Tippy from "@tippyjs/react/headless";
 import { Wrapper as PropperWrapper } from "~/components/Popper";
 import styles from "./Header.module.scss";
 import images from "~/assets/images";
+import AccountItem from "~/components/AccountItem";
 
 const cx = classNames.bind(styles);
 
@@ -33,7 +34,13 @@ function Header() {
           interactive
           render={(attrs) => (
             <div className={cx("search-result")} tabIndex="-1" {...attrs}>
-              <PropperWrapper>result</PropperWrapper>
+              <PropperWrapper>
+                <h4 className={cx("search-title")}>Accounts</h4>
+                <AccountItem />
+                <AccountItem />
+                <AccountItem />
+                <AccountItem />
+              </PropperWrapper>
             </div>
           )}
         >

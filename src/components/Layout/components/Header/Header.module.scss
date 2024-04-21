@@ -19,6 +19,11 @@
 
 .logo {
 }
+
+.search,
+.search-result {
+  width: 361px;
+}
 .search {
   width: 361px;
   position: relative;
@@ -61,6 +66,7 @@
     color: rgb(78, 75, 75);
   }
 }
+
 .clear,
 .loading {
   position: absolute;
