@@ -7,6 +7,7 @@ import {
   faPlus,
   faSignIn,
   faSpinner,
+  faEllipsisVertical,
 } from "@fortawesome/free-solid-svg-icons";
 import Tippy from "@tippyjs/react/headless";
 
@@ -15,6 +16,7 @@ import { Wrapper as PropperWrapper } from "~/components/Popper";
 import styles from "./Header.module.scss";
 import images from "~/assets/images";
 import AccountItem from "~/components/AccountItem";
+import Menu from "~/components/Popper/Menu";
 
 const cx = classNames.bind(styles);
 
@@ -37,13 +39,13 @@ function Header() {
           interactive
           render={(attrs) => (
             <div className={cx("search-result")} tabIndex="-1" {...attrs}>
-              <PropperWrapper>
+              {/* <PropperWrapper>
                 <h4 className={cx("search-title")}>Accounts</h4>
                 <AccountItem />
                 <AccountItem />
                 <AccountItem />
                 <AccountItem />
-              </PropperWrapper>
+              </PropperWrapper> */}
             </div>
           )}
         >
@@ -69,6 +71,12 @@ function Header() {
           <Button primary rightIcon={<FontAwesomeIcon icon={faSignIn} />}>
             Log In
           </Button>
+
+          <Menu>
+            <button className={cx("more-btn")}>
+              <FontAwesomeIcon icon={faEllipsisVertical} />
+            </button>
+          </Menu>
         </div>
       </div>
     </header>
