@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleXmark,
   faMagnifyingGlass,
+  faPlus,
+  faSignIn,
   faSpinner,
 } from "@fortawesome/free-solid-svg-icons";
 import Tippy from "@tippyjs/react/headless";
@@ -61,7 +63,12 @@ function Header() {
           </div>
         </Tippy>
         <div className={cx("actions")}>
-          <Button primary>Log In</Button>
+          <Button outline1 leftIcon={<FontAwesomeIcon icon={faPlus} />}>
+            Upload
+          </Button>
+          <Button primary rightIcon={<FontAwesomeIcon icon={faSignIn} />}>
+            Log In
+          </Button>
         </div>
       </div>
     </header>
