@@ -8,6 +8,11 @@ import {
   faSignIn,
   faSpinner,
   faEllipsisVertical,
+  faEarthAmericas,
+  faLightbulb,
+  faQuestionCircle,
+  faKeyboard,
+  faMoon,
 } from "@fortawesome/free-solid-svg-icons";
 import Tippy from "@tippyjs/react/headless";
 
@@ -19,6 +24,31 @@ import AccountItem from "~/components/AccountItem";
 import Menu from "~/components/Popper/Menu";
 
 const cx = classNames.bind(styles);
+
+const MENU_ITEMS = [
+  {
+    icon: <FontAwesomeIcon icon={faLightbulb} />,
+    title: "LIVE Creator Hub",
+    to: "/livecreatorhub",
+  },
+  {
+    icon: <FontAwesomeIcon icon={faEarthAmericas} />,
+    title: "English",
+  },
+  {
+    icon: <FontAwesomeIcon icon={faQuestionCircle} />,
+    title: "Feedback and help",
+    to: "/feedback",
+  },
+  {
+    icon: <FontAwesomeIcon icon={faKeyboard} />,
+    title: "Keyboard shortcuts",
+  },
+  {
+    icon: <FontAwesomeIcon icon={faMoon} />,
+    title: "Dark Mode",
+  },
+];
 
 function Header() {
   const [searchResult, setSearchResult] = useState([]);
@@ -72,7 +102,7 @@ function Header() {
             Log In
           </Button>
 
-          <Menu>
+          <Menu items={MENU_ITEMS}>
             <button className={cx("more-btn")}>
               <FontAwesomeIcon icon={faEllipsisVertical} />
             </button>
