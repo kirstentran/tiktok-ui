@@ -8,7 +8,9 @@ import styles from "./Menu.module.scss";
 
 const cx = classNames.bind(styles);
 
-function Menu({ children, items = [] }) {
+const defaultFn = () => {};
+
+function Menu({ children, items = [], onChange }) {
   const [history, setHistory] = useState([{ data: items }]);
   const current = history[history.length - 1];
 
@@ -23,6 +25,8 @@ function Menu({ children, items = [] }) {
           onClick={() => {
             if (isParent) {
               setHistory((prev) => [...prev, item.children]);
+            } else {
+              onChange(item);
             }
           }}
         />
@@ -40,7 +44,12 @@ function Menu({ children, items = [] }) {
           <PropperWrapper className={cx("menu-popper")}>
             {/* <Header title="Language" /> */}
             {history.length > 1 && (
-              <Header title="Language" onBack={() => {}} />
+              <Header
+                title="Language"
+                onBack={() => {
+                  setHistory((prev) => prev.slice(0, prev.length - 1));
+                }}
+              />
             )}
             {renderItems()}
           </PropperWrapper>
