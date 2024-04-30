@@ -182,9 +182,12 @@ function Header() {
         <div className={cx("actions")}>
           {currentUser ? (
             <>
-              <Button outline1 leftIcon={<FontAwesomeIcon icon={faPlus} />}>
-                Upload
-              </Button>
+              <Tippy delay={[0, 200]} content="Upload video" placement="bottom">
+                <Button outline1 leftIcon={<FontAwesomeIcon icon={faPlus} />}>
+                  Upload
+                </Button>
+              </Tippy>
+
               <Tippy delay={[0, 200]} content="Message" placement="bottom">
                 <button className={cx("action-btn")}>
                   <FontAwesomeIcon icon={faMessage} />
