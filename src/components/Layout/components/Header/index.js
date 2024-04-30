@@ -23,8 +23,6 @@ import {
 
 import {
   faBookmark,
-  faCloudUpload,
-  faMessage,
   faSave,
   faUser,
 } from "@fortawesome/free-regular-svg-icons";
@@ -38,6 +36,9 @@ import styles from "./Header.module.scss";
 import images from "~/assets/images";
 import AccountItem from "~/components/AccountItem";
 import Menu from "~/components/Popper/Menu";
+import { MessageIcon } from "~/components/Icons";
+import { InboxIcon } from "~/components/Icons";
+import Image from "~/components/Image";
 
 const cx = classNames.bind(styles);
 
@@ -190,7 +191,13 @@ function Header() {
 
               <Tippy delay={[0, 200]} content="Message" placement="bottom">
                 <button className={cx("action-btn")}>
-                  <FontAwesomeIcon icon={faMessage} />
+                  <MessageIcon />
+                </button>
+              </Tippy>
+
+              <Tippy delay={[0, 200]} content="Inbox" placement="bottom">
+                <button className={cx("action-btn")}>
+                  <InboxIcon />
                 </button>
               </Tippy>
             </>
@@ -210,10 +217,11 @@ function Header() {
             onChange={handleMenuChange}
           >
             {currentUser ? (
-              <img
+              <Image
                 className={cx("user-avatar")}
                 src="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/4b85df94ddbc913a995d4d721e417580.jpeg?lk3s=a5d48078&x-expires=1714359600&x-signature=CBg2VGaJiNGysDfLmqHZlucMRMM%3D "
                 alt="Nguyen Van A"
+                fallback="https://p19-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/7363727724084953131~c5_720x720.jpeg?lk3s=a5d48078&amp;x-expires=1714680000&amp;x-signature=YnQzrIxFaRorvoBAJ%2FNPRh5oors%3D"
               />
             ) : (
               <button className={cx("more-btn")}>
