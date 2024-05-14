@@ -35,8 +35,7 @@ import styles from "./Header.module.scss";
 import images from "~/assets/images";
 import AccountItem from "~/components/AccountItem";
 import Menu from "~/components/Popper/Menu";
-import { MessageIcon } from "~/components/Icons";
-import { InboxIcon } from "~/components/Icons";
+import { MessageIcon, InboxIcon, SearchIcon } from "~/components/Icons";
 import Image from "~/components/Image";
 
 const cx = classNames.bind(styles);
@@ -146,11 +145,11 @@ function Header() {
   return (
     <header className={cx("wrapper")}>
       <div className={cx("inner")}>
-        <img src={images.logo} alt="TikTok" />
+        <img src={images.logo} alt="Tiktok" />
 
         <HeadlessTippy
-          visible={searchResult.length > 0}
           interactive
+          visible={searchResult.length > 0}
           render={(attrs) => (
             <div className={cx("search-result")} tabIndex="-1" {...attrs}>
               <PropperWrapper>
