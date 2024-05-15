@@ -68,12 +68,19 @@
 
 .outline1 {
   border: 1px solid rgba(22, 24, 35, 0.12);
-  background-color: rgba(22, 24, 35, 0.03);
+  background-color: var(--white);
   color: var(--black);
   font-weight: 400;
-  font-family: "TikTokFont", sans-serif;
+  // font-family: "TikTokFont", sans-serif;
   border-radius: 2px;
+  min-width: 110px;
+  padding: 0px 16px;
+  height: 36px;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
   align-items: center;
+  justify-content: center;
 
   &:hover {
     background-color: rgba(22, 24, 35, 0.12);
