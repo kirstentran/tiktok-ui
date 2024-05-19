@@ -64,7 +64,8 @@
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--white);
-  font-family: "TikTokFont", sans-serif;
+
+  font-family: var(--font-family);
   background-color: var(--primary);
 }
 
