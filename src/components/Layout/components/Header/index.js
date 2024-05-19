@@ -19,6 +19,8 @@ import {
 import { faBookmark, faUser } from "@fortawesome/free-regular-svg-icons";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
+import { Link } from "react-router-dom";
+
 import Button from "~/components/Button";
 import styles from "./Header.module.scss";
 import images from "~/assets/images";
@@ -126,15 +128,20 @@ function Header() {
   return (
     <header className={cx("wrapper")}>
       <div className={cx("inner")}>
-        <img src={images.logo} alt="Tiktok" />
+        <Link to="/" className={cx("logo-link")}>
+          <img src={images.logo} alt="Tiktok" />
+        </Link>
 
         <Search />
-
         <div className={cx("actions")}>
           {currentUser ? (
             <>
               <Tippy delay={[0, 50]} content="Upload video" placement="bottom">
-                <Button outline1 leftIcon={<FontAwesomeIcon icon={faPlus} />}>
+                <Button
+                  outline1
+                  className={cx("uploadBtn")}
+                  leftIcon={<FontAwesomeIcon icon={faPlus} />}
+                >
                   Upload
                 </Button>
               </Tippy>
