@@ -40,6 +40,7 @@ function Menu({
   };
   return (
     <Tippy
+      visible
       interactive
       delay={[0, 1000]}
       offset={[13, 8]}
@@ -57,7 +58,8 @@ function Menu({
                 }}
               />
             )}
-            {renderItems()}
+            {/* "alt+w" */}
+            <div className={cx("menu-body")}> {renderItems()}</div>
           </PropperWrapper>
         </div>
       )}
