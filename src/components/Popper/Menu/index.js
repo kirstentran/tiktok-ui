@@ -40,7 +40,6 @@ function Menu({
   };
   return (
     <Tippy
-      visible
       interactive
       delay={[0, 1000]}
       offset={[13, 8]}

@@ -54,118 +54,6 @@ const MENU_ITEMS = [
           code: "vi",
           title: "Tiếng Việt",
         },
-        {
-          type: "language",
-          code: "vi",
-          title: "Tiếng Việt",
-        },
-        {
-          type: "language",
-          code: "vi",
-          title: "Tiếng Việt",
-        },
-        {
-          type: "language",
-          code: "vi",
-          title: "Tiếng Việt",
-        },
-        {
-          type: "language",
-          code: "vi",
-          title: "Tiếng Việt",
-        },
-        {
-          type: "language",
-          code: "vi",
-          title: "Tiếng Việt",
-        },
-        {
-          type: "language",
-          code: "vi",
-          title: "Tiếng Việt",
-        },
-        {
-          type: "language",
-          code: "vi",
-          title: "Tiếng Việt",
-        },
-        {
-          type: "language",
-          code: "vi",
-          title: "Tiếng Việt",
-        },
-        {
-          type: "language",
-          code: "vi",
-          title: "Tiếng Việt",
-        },
-        {
-          type: "language",
-          code: "vi",
-          title: "Tiếng Việt",
-        },
-
-        {
-          type: "language",
-          code: "vi",
-          title: "Tiếng Việt",
-        },
-        {
-          type: "language",
-          code: "vi",
-          title: "Tiếng Việt",
-        },
-
-        {
-          type: "language",
-          code: "en",
-          title: "English",
-        },
-        {
-          type: "language",
-          code: "en",
-          title: "English",
-        },
-        {
-          type: "language",
-          code: "en",
-          title: "English",
-        },
-        {
-          type: "language",
-          code: "en",
-          title: "English",
-        },
-        {
-          type: "language",
-          code: "en",
-          title: "English",
-        },
-        {
-          type: "language",
-          code: "en",
-          title: "English",
-        },
-        {
-          type: "language",
-          code: "en",
-          title: "English",
-        },
-        {
-          type: "language",
-          code: "en",
-          title: "English",
-        },
-        {
-          type: "language",
-          code: "en",
-          title: "English",
-        },
-        {
-          type: "language",
-          code: "vi",
-          title: "Tiếng Việt",
-        },
       ],
     },
   },
@@ -291,8 +179,8 @@ function Header() {
               <Image
                 className={cx("user-avatar")}
                 src="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/4b85df94ddbc913a995d4d721e417580.jpeg?lk3s=a5d48078&x-expires=1714359600&x-signature=CBg2VGaJiNGysDfLmqHZlucMRMM%3D "
-                alt="Nguyen Van A"
-                fallback="https://p19-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/7363727724084953131~c5_100x100.jpeg?lk3s=a5d48078&x-expires=1715745600&x-signature=CYBAY3FHpZM5fQ%2BdFhXfW4n0V50%3D"
+                alt="User name"
+                fallback="https://p16-pu-sign-useast8.tiktokcdn-us.com/tos-useast5-avt-0068-tx/7363727724084953131~c5_100x100.jpeg?lk3s=a5d48078&nonce=92135&refresh_token=d0bfd9c6a5631112e6c43c084264b43d&x-expires=1716508800&x-signature=7F4JsdpP5jt4mNNQF3Qs7FRODBU%3D&shp=a5d48078&shcp=81f88b70"
               />
             ) : (
               <button className={cx("more-btn")}>
